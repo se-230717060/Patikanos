@@ -1,5 +1,6 @@
 def score_hour(feels_like, wind, rain_prob, uv, activity):
     """Bir saatin bisiklet veya yürüyüş için uygunluk skoru (0-10)."""
+    bike = activity == "bike"
     score = 10
 
     # Sıcaklık
@@ -7,20 +8,28 @@ def score_hour(feels_like, wind, rain_prob, uv, activity):
         score -= 4
     elif feels_like >= 27:
         score -= 2
-    elif feels_like < 8:
-        score -= 3 if activity == "bike" else 2
+    elif feels_like <= 12 and bike:
+        score -= 3
 
-    # Yağış
-    if rain_prob > 60:
-        score -= 5 if activity == "bike" else 4
-    elif rain_prob >= 30:
-        score -= 2
+    # Yağmur
+    heavy_rain = rain_prob > 60
+    light_rain = 30 <= rain_prob <= 60
+    if heavy_rain:
+        score -= 5 if bike else 3
+    elif light_rain:
+        score -= 2 if bike else 1
 
     # Rüzgâr
-    if wind > 30:
-        score -= 4 if activity == "bike" else 1
-    elif wind >= 20 and activity == "bike":
+    strong_wind = wind > 30
+    moderate_wind = 20 <= wind <= 30
+    if strong_wind:
+        score -= 4 if bike else 1
+    elif moderate_wind and bike:
         score -= 2
+
+    # Fırtına: yüksek yağmur + sert rüzgâr birlikte
+    if heavy_rain and strong_wind:
+        score -= 2 if bike else 3
 
     # UV
     if uv > 7:
