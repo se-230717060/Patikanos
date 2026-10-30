@@ -3,11 +3,13 @@ from geoalchemy2.shape import to_shape
 from shapely.geometry import mapping
 from sqlalchemy import select
 from sqlalchemy.orm import Session
+from app.weather.router import router as weather_router
 
 from app.db import get_db
 from app.models import Route
 
 app = FastAPI(title="Patikanos API")
+app.include_router(weather_router)
 
 
 def route_to_feature(r: Route) -> dict:
