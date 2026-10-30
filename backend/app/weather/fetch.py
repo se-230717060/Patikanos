@@ -1,6 +1,6 @@
 import httpx
 
-from app.weather.scoring import score_hour
+from app.weather.scoring import score_hour, best_window, window_label, window_warnings
 
 URL = "https://api.open-meteo.com/v1/forecast"
 
@@ -13,18 +13,28 @@ params = {
 }
 
 response = httpx.get(URL, params=params, timeout=10)
-data = response.json()
-hourly = data["hourly"]
+hourly = response.json()["hourly"]
 
-for i in range(len(hourly["time"])):
-    saat = hourly["time"][i][11:16]
-    sicaklik = hourly["temperature_2m"][i]
-    hissedilen = hourly["apparent_temperature"][i]
-    ruzgar = hourly["wind_speed_10m"][i]
-    yagis = hourly["precipitation_probability"][i]
-    uv = hourly["uv_index"][i]
+times = hourly["time"]
+feels = hourly["apparent_temperature"]
+wind = hourly["wind_speed_10m"]
+rain = hourly["precipitation_probability"]
+uv = hourly["uv_index"]
 
-    bisiklet = score_hour(hissedilen, ruzgar, yagis, uv, "bike")
-    yuruyus = score_hour(hissedilen, ruzgar, yagis, uv, "walk")
+scores = {"bike": [], "walk": []}
+for i in range(len(times)):
+    for activity in scores:
+        scores[activity].append(score_hour(feels[i], wind[i], rain[i], uv[i], activity))
+    print(f"{times[i][11:16]} → hissedilen {feels[i]}°C, rüzgâr {wind[i]}, yağış %{rain[i]}, UV {uv[i]}"
+          f"  |  🚲 {scores['bike'][i]}  🚶 {scores['walk'][i]}")
 
-    print(f"{saat} → {sicaklik}°C (hissedilen {hissedilen}), rüzgâr {ruzgar}, yağış %{yagis}, UV {uv}  |  🚲 {bisiklet}  🚶 {yuruyus}")
+print()
+for activity, emoji, name in [("bike", "🚲", "Bisiklet"), ("walk", "🚶", "Yürüyüş")]:
+    window = best_window(times, scores[activity])
+    if window is None:
+        print(f"{emoji} {name}: Bugün uygun saat yok")
+        continue
+    start, end = window
+    print(f"{emoji} {name} için en iyi zaman: {window_label(times, start, end)}")
+    for note in window_warnings(feels, rain, uv, start, end):
+        print(f"   ⚠️ {note}")
