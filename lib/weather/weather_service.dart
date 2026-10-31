@@ -13,11 +13,13 @@ class WeatherService {
     required double lat,
     required double lon,
     required String activity,
+    String day = 'today',
   }) async {
     final uri = Uri.parse('$baseUrl/weather/score').replace(queryParameters: {
       'lat': '$lat',
       'lon': '$lon',
       'activity': activity,
+      'day': day,
     });
     final response = await http.get(uri).timeout(const Duration(seconds: 10));
     if (response.statusCode != 200) {

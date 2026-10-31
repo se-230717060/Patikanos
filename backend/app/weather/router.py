@@ -1,26 +1,36 @@
 from datetime import datetime
 from typing import Literal
 from zoneinfo import ZoneInfo
+
+import httpx
+from fastapi import APIRouter, HTTPException
 from fastapi.responses import JSONResponse
+
+from app.weather.client import get_hourly
+from app.weather.scoring import best_window, score_hour, window_label, window_warnings
 
 
 class UTF8JSONResponse(JSONResponse):
     media_type = "application/json; charset=utf-8"
-import httpx
-from fastapi import APIRouter, HTTPException
 
-from app.weather.client import get_hourly
-from app.weather.scoring import best_window, score_hour, window_label, window_warnings
 
 router = APIRouter(prefix="/weather", tags=["weather"], default_response_class=UTF8JSONResponse)
 
 
 @router.get("/score")
-def get_score(lat: float, lon: float, activity: Literal["bike", "walk"]):
+def get_score(
+    lat: float,
+    lon: float,
+    activity: Literal["bike", "walk"],
+    day: Literal["today", "tomorrow"] = "today",
+):
     try:
-        h = get_hourly(lat, lon)
+        h = get_hourly(lat, lon, days=2 if day == "tomorrow" else 1)
     except httpx.HTTPError:
         raise HTTPException(status_code=503, detail="Hava durumu servisine ulaşılamadı")
+
+    if day == "tomorrow":
+        h = {key: values[24:] for key, values in h.items()}
 
     times = h["time"]
     feels = h["apparent_temperature"]
@@ -43,6 +53,7 @@ def get_score(lat: float, lon: float, activity: Literal["bike", "walk"]):
 
     return {
         "activity": activity,
+        "day": day,
         "now": {"time": times[now_i][11:16], "score": scores[now_i]} if now_i is not None else None,
         "best_window": best,
         "warnings": warnings,

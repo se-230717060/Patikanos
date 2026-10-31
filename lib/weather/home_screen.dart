@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'weather_model.dart';
 import 'weather_service.dart';
 import 'detail_screen.dart';
+import 'notification_service.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -28,12 +29,22 @@ class _HomeScreenState extends State<HomeScreen> {
       lon: WeatherService.muglaLon,
       activity: _activity,
     );
+        NotificationService.scheduleAll(_activity).catchError((_) {});
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Bugün · Muğla')),
+            appBar: AppBar(
+        title: const Text('Bugün · Muğla'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.notifications_active),
+            tooltip: 'Bildirim testi',
+            onPressed: () => NotificationService.testIn5Seconds(),
+          ),
+        ],
+      ),
       body: Column(
         children: [
           Padding(
