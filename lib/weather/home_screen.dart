@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'weather_model.dart';
 import 'weather_service.dart';
+import 'detail_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -108,6 +109,17 @@ class _ScoreView extends StatelessWidget {
                 : '${data.bestStart} – ${data.bestEnd}'),
           ),
         ),
+        Card(                                              // ← YENİ
+          child: ListTile(
+            leading: const Icon(Icons.bar_chart),
+            title: const Text('Saatlik detay'),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => DetailScreen(data: data)),
+            ),
+          ),
+        ),     
         for (final warning in data.warnings)
           Card(
             child: ListTile(
