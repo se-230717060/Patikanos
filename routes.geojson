@@ -1,0 +1,373 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "R01",
+        "name": "Ölüdeniz – Kumburnu – Sarısu döngü",
+        "region": "Fethiye",
+        "activity": [
+          "walking"
+        ],
+        "distance_km": 8.69,
+        "elevation_gain_m": 394,
+        "difficulty": 2,
+        "est_duration_min": null,
+        "surface": null,
+        "start": [
+          29.11401,
+          36.55038
+        ],
+        "warnings": [],
+        "source_url": "https://tr.wikiloc.com/gezi-yuruyus-rotalari/mugla-ili-fethiye-ilcesi-oludeniz-kumburnu-tepesi-yogun-burnu-ve-sarisu-plaji-dongu-parkuru-126677349"
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "R02",
+        "name": "Kayaköy – Gemiler – İblis Burnu döngü",
+        "region": "Fethiye",
+        "activity": [
+          "walking"
+        ],
+        "distance_km": 11.55,
+        "elevation_gain_m": 645,
+        "difficulty": 2,
+        "est_duration_min": null,
+        "surface": null,
+        "start": [
+          29.05297,
+          36.56244
+        ],
+        "warnings": [],
+        "source_url": "https://tr.wikiloc.com/gezi-yuruyus-rotalari/mugla-ili-fethiye-ilcesi-kayakoy-mahallesi-iblis-burnu-yarim-adasi-darbogaz-koyu-ve-akvaryum-koyu-d-77323793"
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "R03",
+        "name": "Likya Yolu: Faralya – Kabak",
+        "region": "Fethiye",
+        "activity": [
+          "walking"
+        ],
+        "distance_km": 9.04,
+        "elevation_gain_m": 410,
+        "difficulty": 2,
+        "est_duration_min": null,
+        "surface": null,
+        "start": [
+          29.1257,
+          36.47092
+        ],
+        "warnings": [],
+        "source_url": "https://tr.wikiloc.com/gezi-yuruyus-rotalari/likya-yolu-lycia-way-nun-mugla-ili-fethiye-ilcesi-faralya-mah-kelebekler-vadisi-sirtlari-aktas-plaj-166688797"
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "R04",
+        "name": "Karia Yolu Bozburun Etap 1: İçmeler – Kumlubük",
+        "region": "Marmaris",
+        "activity": [
+          "walking"
+        ],
+        "distance_km": 13.18,
+        "elevation_gain_m": 747,
+        "difficulty": 3,
+        "est_duration_min": null,
+        "surface": null,
+        "start": [
+          28.22607,
+          36.79791
+        ],
+        "warnings": [],
+        "source_url": "https://tr.wikiloc.com/gezi-yuruyus-rotalari/karia-yolu-bozburun-etap-1-icmeler-amos-kumlubuk-13-km-253148956"
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "R05",
+        "name": "Karia Yolu Bozburun Etap 2: Kumlubük – Bayır",
+        "region": "Marmaris",
+        "activity": [
+          "walking"
+        ],
+        "distance_km": 14.1,
+        "elevation_gain_m": 750,
+        "difficulty": 3,
+        "est_duration_min": null,
+        "surface": null,
+        "start": [
+          28.25873,
+          36.76619
+        ],
+        "warnings": [],
+        "source_url": "https://tr.wikiloc.com/gezi-yuruyus-rotalari/karia-yolu-bozburun-etap-2-kumlubuk-bayir-14-km-253149130"
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "R06",
+        "name": "Karia Yolu: Akyaka – Turnalı",
+        "region": "Ula",
+        "activity": [
+          "walking"
+        ],
+        "distance_km": 16.16,
+        "elevation_gain_m": 575,
+        "difficulty": 2,
+        "est_duration_min": null,
+        "surface": null,
+        "start": [
+          28.30199,
+          37.0556
+        ],
+        "warnings": [],
+        "source_url": "https://tr.wikiloc.com/gezi-yuruyus-rotalari/karya-yolu-akyaka-turnali-196471095"
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "R07",
+        "name": "Toparlar Şelalesi",
+        "region": "Köyceğiz",
+        "activity": [
+          "walking"
+        ],
+        "distance_km": 6.58,
+        "elevation_gain_m": 230,
+        "difficulty": 1,
+        "est_duration_min": null,
+        "surface": null,
+        "start": [
+          28.63789,
+          36.99851
+        ],
+        "warnings": [],
+        "source_url": "https://tr.wikiloc.com/gezi-yuruyus-rotalari/toparlar-selalesi-doga-yuruyusu-280286946"
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "R08",
+        "name": "Bitez – Akvaryum Köyü",
+        "region": "Bodrum",
+        "activity": [
+          "walking"
+        ],
+        "distance_km": 5.95,
+        "elevation_gain_m": 36,
+        "difficulty": 1,
+        "est_duration_min": null,
+        "surface": null,
+        "start": [
+          27.37259,
+          37.02688
+        ],
+        "warnings": [],
+        "source_url": "https://tr.wikiloc.com/gezi-yuruyus-rotalari/bodrum-bitez-koylari-6-km-150994201"
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "R09",
+        "name": "Yokuşbaşı – Gebe Kilise – Pedasa Leleg Yolu",
+        "region": "Bodrum",
+        "activity": [
+          "walking"
+        ],
+        "distance_km": 14.01,
+        "elevation_gain_m": 694,
+        "difficulty": 2,
+        "est_duration_min": null,
+        "surface": null,
+        "start": [
+          27.4397,
+          37.05443
+        ],
+        "warnings": [],
+        "source_url": "https://tr.wikiloc.com/gezi-yuruyus-rotalari/yokusbasi-gebe-kilise-pedasa-yokusbasi-leleg-yolu-90579411"
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "R10",
+        "name": "Karia Yolu: Değirmendere Kanyonu",
+        "region": "Menteşe",
+        "activity": [
+          "walking"
+        ],
+        "distance_km": 11.02,
+        "elevation_gain_m": 318,
+        "difficulty": 1,
+        "est_duration_min": null,
+        "surface": null,
+        "start": [
+          28.37209,
+          37.21618
+        ],
+        "warnings": [],
+        "source_url": "https://tr.wikiloc.com/gezi-yuruyus-rotalari/trekinturkey-karia-yolu-degirmendere-kanyonu-hiking-13-2-2016-12265272"
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "R11",
+        "name": "Karia Yolu: Akbük – Ören",
+        "region": "Milas",
+        "activity": [
+          "walking"
+        ],
+        "distance_km": 16.9,
+        "elevation_gain_m": 747,
+        "difficulty": 3,
+        "est_duration_min": null,
+        "surface": null,
+        "start": [
+          28.08696,
+          37.03043
+        ],
+        "warnings": [],
+        "source_url": "https://www.wikiloc.com/hiking-trails/akbuk-oren-209932574"
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "R12",
+        "name": "Kötekli turu",
+        "region": "Menteşe",
+        "activity": [
+          "cycling"
+        ],
+        "distance_km": 18.15,
+        "elevation_gain_m": 89,
+        "difficulty": 2,
+        "est_duration_min": null,
+        "surface": null,
+        "start": [
+          28.37553,
+          37.1827
+        ],
+        "warnings": [],
+        "source_url": "https://tr.wikiloc.com/bisiklet-turu-rotalari/kotekli-turu-256069565"
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "R13",
+        "name": "Akyaka – Çamlı – İncelum Plajı",
+        "region": "Ula",
+        "activity": [
+          "cycling"
+        ],
+        "distance_km": 23.22,
+        "elevation_gain_m": 253,
+        "difficulty": 2,
+        "est_duration_min": null,
+        "surface": null,
+        "start": [
+          28.3245,
+          37.05168
+        ],
+        "warnings": [],
+        "source_url": "https://tr.wikiloc.com/bisiklet-turu-rotalari/akyaka-camli-incelum-plaji-227454508"
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "R14",
+        "name": "Dalyan – Sultaniye – Köyceğiz – Eskiköy",
+        "region": "Ortaca",
+        "activity": [
+          "cycling"
+        ],
+        "distance_km": 62.86,
+        "elevation_gain_m": 561,
+        "difficulty": 2,
+        "est_duration_min": null,
+        "surface": null,
+        "start": [
+          28.62347,
+          36.85986
+        ],
+        "warnings": [],
+        "source_url": "https://www.wikiloc.com/cycling-trails/dalyan-sultaniye-koycegiz-eskikoy-dalyan-36171894"
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "R15",
+        "name": "Mesudiye Demlik Camping – Palamutbükü",
+        "region": "Datça",
+        "activity": [
+          "cycling"
+        ],
+        "distance_km": 14.45,
+        "elevation_gain_m": 219,
+        "difficulty": 1,
+        "est_duration_min": null,
+        "surface": null,
+        "start": [
+          27.56002,
+          36.68503
+        ],
+        "warnings": [],
+        "source_url": "https://tr.wikiloc.com/bisiklet-rotalari/mesudiye-demlik-camping-palamutbuku-289319606"
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "R16",
+        "name": "Datça – Kargı Plajı",
+        "region": "Datça",
+        "activity": [
+          "cycling"
+        ],
+        "distance_km": 9.65,
+        "elevation_gain_m": 91,
+        "difficulty": 1,
+        "est_duration_min": null,
+        "surface": null,
+        "start": [
+          27.68559,
+          36.72408
+        ],
+        "warnings": [],
+        "source_url": "https://tr.wikiloc.com/bisiklet-rotalari/datca-kargi-plaji-186444609"
+      },
+      "geometry": null
+    }
+  ]
+}
